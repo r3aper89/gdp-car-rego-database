@@ -33,7 +33,7 @@ The database schema consists of the following tables:
 
 | Column       | Type    | Constraints                        |
 | ------------ | ------- | ---------------------------------- |
-| car_id       | SERIAL  | PRIMARY KEY                        |
+| fleet_car_id | SERIAL  | PRIMARY KEY                        |
 | number_plate | VARCHAR | NOT NULL, UNIQUE                   |
 | expiry_date  | DATE    | NOT NULL                           |
 | model_id     | INT     | NOT NULL, FOREIGN KEY (car_models) |
@@ -71,7 +71,7 @@ erDiagram
 ```mermaid
 erDiagram
     fleet_cars {
-        int car_id PK
+        int fleet_car_id PK
         varchar number_plate
         date expiry_date
         int model_id FK
@@ -124,20 +124,20 @@ The initial data includes records for car brands, car models, and fleet cars. He
 
 ### fleet_cars
 
-| car_id | number_plate | expiry_date | model_id | driver_name        | fleet_active |
-| ------ | ------------ | ----------- | -------- | ------------------ | ------------ |
-| 1      | S123ABC      | 2024-07-08  | 1        | Shelton Church     | TRUE         |
-| 2      | S125ABJ      | 2024-08-01  | 1        | Gwendoline Burke   | TRUE         |
-| 3      | S126ABO      | 2024-08-02  | 2        | Laurel Hailey      | TRUE         |
-| 4      | S127ABL      | 2024-08-08  | 3        | Hale Westcott      | TRUE         |
-| 5      | S125ABE      | 2024-11-15  | 3        | Philippa Bates     | TRUE         |
-| 6      | S124ABD      | 2024-11-15  | 3        | Agatha Hightower   | TRUE         |
-| 7      | S126ABF      | 2024-11-15  | 4        | Wilkie Sempers     | TRUE         |
-| 8      | S123ABM      | 2024-12-24  | 4        | Hester Hodges      | TRUE         |
-| 9      | S127ABP      | 2024-12-25  | 4        | Arron Duke         | TRUE         |
-| 10     | S126ABK      | 2025-01-05  | 4        | Vonda Wall         | TRUE         |
-| 11     | S127ABG      | 2025-03-31  | 5        | Leola Holt         | TRUE         |
-| 12     | S123ABH      | 2025-03-31  | 6        | Marshall Blakeslee | TRUE         |
-| 13     | S124ABC      | 2025-04-09  | 7        | Rosamond Frank     | TRUE         |
-| 14     | S125ABN      | 2025-04-09  | 7        | Rosemary Croft     | TRUE         |
-| 15     | S124ABI      | 2025-04-09  | 7        | Sherri Akers       | TRUE         |
+| fleet_car_id | number_plate | expiry_date | model_id | driver_name        | fleet_active |
+| ------------ | ------------ | ----------- | -------- | ------------------ | ------------ |
+| 1            | S123ABC      | 2024-07-08  | 1        | Shelton Church     | TRUE         |
+| 2            | S125ABJ      | 2024-08-01  | 1        | Gwendoline Burke   | TRUE         |
+| 3            | S126ABO      | 2024-08-02  | 2        | Laurel Hailey      | TRUE         |
+| 4            | S127ABL      | 2024-08-08  | 3        | Hale Westcott      | TRUE         |
+| 5            | S125ABE      | 2024-11-15  | 3        | Philippa Bates     | TRUE         |
+| 6            | S124ABD      | 2024-11-15  | 3        | Agatha Hightower   | TRUE         |
+| 7            | S126ABF      | 2024-11-15  | 4        | Wilkie Sempers     | TRUE         |
+| 8            | S123ABM      | 2024-12-24  | 4        | Hester Hodges      | TRUE         |
+| 9            | S127ABP      | 2024-12-25  | 4        | Arron Duke         | TRUE         |
+| 10           | S126ABK      | 2025-01-05  | 4        | Vonda Wall         | TRUE         |
+| 11           | S127ABG      | 2025-03-31  | 5        | Leola Holt         | TRUE         |
+| 12           | S123ABH      | 2025-03-31  | 6        | Marshall Blakeslee | TRUE         |
+| 13           | S124ABC      | 2025-04-09  | 7        | Rosamond Frank     | TRUE         |
+| 14           | S125ABN      | 2025-04-09  | 7        | Rosemary Croft     | TRUE         |
+| 15           | S124ABI      | 2025-04-09  | 7        | Sherri Akers       | TRUE         |
