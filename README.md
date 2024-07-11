@@ -9,6 +9,23 @@ Open VSCode Command Palette (F1) and select:
 -   `Dev Container: Reopen in Container`
 -   OR
 -   `Dev Container: Rebuild Without Cache and Reopen in Container`
+-
+
+## start backend
+
+dont start with devcontainer do the following
+
+create network
+
+```sh
+docker network create network-gdp-car-rego
+```
+
+start container
+
+```sh
+docker-compose up -d
+```
 
 ## Test database
 

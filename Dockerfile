@@ -1,5 +1,5 @@
-# Use the latest PostgreSQL image
-FROM postgres:latest
+# Use the latest stable PostgreSQL image
+FROM postgres:13
 
 # Set environment variables for PostgreSQL
 ENV POSTGRES_USER=admin

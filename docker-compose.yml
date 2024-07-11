@@ -1,3 +1,4 @@
+version: "3.8"
 services:
     db:
         build: . # Build the image using the Dockerfile in the current directory
@@ -15,6 +16,8 @@ services:
             interval: 10s # Interval between health checks
             timeout: 5s # Timeout for health check
             retries: 5 # Number of retries before marking as unhealthy
+        networks:
+            - network-gdp-car-rego # Specify the custom network
 
     pgadmin:
         image: dpage/pgadmin4 # Use the pgAdmin image
@@ -27,7 +30,13 @@ services:
         depends_on:
             db:
                 condition: service_healthy # Only start pgAdmin if PostgreSQL is healthy
+        networks:
+            - network-gdp-car-rego # Specify the custom network
 
 volumes:
     db-data:
         driver: local # Use local driver for persistent storage
+
+networks:
+    network-gdp-car-rego:
+        external: true # Indicate that this network is managed outside of this compose file
