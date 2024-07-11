@@ -98,12 +98,3 @@ SELECT * FROM fleet_cars;
 SELECT * FROM car_models;
 SELECT * FROM car_brands;
 ```
-
-## References
-
--   [PostgreSQL Docker Official Image](https://hub.docker.com/_/postgres)
--   [Creating a PostgreSQL Docker Container](https://forums.docker.com/t/how-to-make-a-docker-file-for-your-own-postgres-container/126526)
--   [Using the PostgreSQL Docker Image](https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/)
--   [Setting Up PostgreSQL with Docker](https://www.dbvis.com/thetable/how-to-set-up-postgres-using-docker/)
--   [Creating a PostgreSQL Database with Docker](https://dev.to/andre347/how-to-easily-create-a-postgres-database-in-docker-4moj)
--   [awesome-compose repository](https://github.com/docker/awesome-compose/blob/master/postgresql-pgadmin/README.md).
